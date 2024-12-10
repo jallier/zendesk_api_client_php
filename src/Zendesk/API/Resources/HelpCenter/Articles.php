@@ -27,6 +27,11 @@ class Articles extends ResourceAbstract
     /**
      * @{inheritdoc}
      */
+    protected $objectNamePlural = 'articles';
+
+    /**
+     * @{inheritdoc}
+     */
     protected function setupRoutes()
     {
         parent::setUpRoutes();

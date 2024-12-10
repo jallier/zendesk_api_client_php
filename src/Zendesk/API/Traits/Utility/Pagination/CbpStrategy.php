@@ -23,7 +23,7 @@ class CbpStrategy extends AbstractStrategy
         }
         $this->hasMore = $this->latestResponse->meta->has_more;
         if (isset($this->latestResponse->meta->after_cursor)) {
-            $this->afterCursor = $this->latestResponse->meta->after_cursor;
+            $this->afterCursor = urlencode($this->latestResponse->meta->after_cursor);
         }
 
         return $this->latestResponse->{$this->resourcesKey};
